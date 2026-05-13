@@ -12,5 +12,5 @@ beautifulsoup4==4.12.3
 httpx
 playwright
 camoufox
-seleniumbase
 colorama
+python-dotenv==1.0.1

@@ -23,6 +23,9 @@
 
 # Read @License Don't Copy This File This Code Made Only For This Project Do Not Try To Use This Script.
 
+from dotenv import load_dotenv
+load_dotenv()
+
 import uvicorn
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles

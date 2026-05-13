@@ -25,7 +25,7 @@ import os
 from motor.motor_asyncio import AsyncIOMotorClient
 from datetime import datetime
 
-MONGO_URI = os.getenv("MONGO_URI", "ADD INVOIRMENTS VARIABLE")
+MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
 DB_NAME = os.getenv("DB_NAME", "teamdev_aio")
 
 client: AsyncIOMotorClient = None
@@ -60,7 +60,7 @@ async def _seed_admin():
         })
     await db.settings.update_one(
         {"key": "api_enforcement"},
-        {"$setOnInsert": {"key": "api_enforcement", "value": True}},
+        {"$setOnInsert": {"key": "api_enforcement", "value": False}},
         upsert=True
     )
 
